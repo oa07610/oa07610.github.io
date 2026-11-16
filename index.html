@@ -3,169 +3,306 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%2323436b%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E">
 <title>Owais Aijaz</title>
 <meta name="description" content="Owais Aijaz — MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --text: #1f1f1f;
-    --muted: #6b6b6b;
-    --rule: #e2e2e2;
-    --link: #1a4f8b;
-    --bg: #fdfdfb;
+    --text: #1d1d1b;
+    --muted: #66645e;
+    --faint: #74716a;
+    --rule: #e4e1d9;
+    --accent: #23436b;
+    --accent-soft: #eef2f7;
+    --bg: #fbfaf7;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --text: #e6e4df;
-      --muted: #9a978f;
+      --text: #e7e5df;
+      --muted: #a29f97;
+      --faint: #8f8c84;
       --rule: #34332f;
-      --link: #8fb4e0;
-      --bg: #1b1b19;
+      --accent: #9dbbe0;
+      --accent-soft: #232b36;
+      --bg: #1a1a18;
     }
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-family: var(--serif);
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.62;
   }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 20px 80px;
-  }
-  a { color: var(--link); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
-  header {
+  /* Top bar */
+  nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 14.5px;
+  }
+  nav.top .inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  nav.top .name { color: var(--text); font-weight: 600; }
+  nav.top ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; }
+  nav.top ul a { color: var(--muted); }
+  nav.top ul a:hover { color: var(--accent); text-decoration: none; }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 20px 72px;
+  }
+
+  /* Intro */
+  .intro {
+    display: grid;
+    grid-template-columns: 168px 1fr;
+    gap: 0 36px;
+    align-items: start;
+  }
+  .portrait {
+    width: 168px;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
     display: flex;
     align-items: center;
-    gap: 28px;
+    justify-content: center;
   }
-  header .photo {
-    width: 128px;
-    height: 128px;
+  .portrait { position: relative; }
+  .portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    flex-shrink: 0;
+    display: block;
+    z-index: 1;
   }
-  @media (max-width: 520px) {
-    header { flex-direction: column; align-items: flex-start; gap: 18px; }
-    header .photo { width: 104px; height: 104px; }
+  .portrait .initials {
+    font-family: var(--serif);
+    font-size: 44px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
   }
-  header h1 {
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0 0 4px;
+  .portrait { grid-row: 1 / span 2; }
+  .idtext { grid-column: 2; }
+  .bio { grid-column: 2; }
+  .intro h1 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 6px;
     letter-spacing: -0.01em;
   }
-  header .role { color: var(--muted); margin: 0 0 14px; }
-  header .links { margin: 0; }
-  header .links a + a::before {
-    content: "·";
+  .intro .role {
+    font-family: var(--sans);
     color: var(--muted);
-    margin: 0 8px;
-    display: inline-block;
+    font-size: 15.5px;
+    margin: 0 0 16px;
+    line-height: 1.5;
   }
+  .contact {
+    font-family: var(--sans);
+    font-size: 14.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    margin: 0 0 22px;
+    padding: 0;
+    list-style: none;
+  }
+  .contact li + li::before { content: "·"; color: var(--faint); margin-right: 8px; }
+  .intro p { margin: 0 0 12px; }
+  .status { font-style: italic; }
 
-  section { margin-top: 44px; }
+  /* Sections */
+  section { margin-top: 56px; scroll-margin-top: 64px; }
   h2 {
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin: 0 0 14px;
+    margin: 0 0 18px;
     padding-bottom: 6px;
     border-bottom: 1px solid var(--rule);
   }
   h3 {
-    font-size: 15px;
+    font-family: var(--sans);
+    font-size: 13px;
     font-weight: 600;
-    margin: 22px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--faint);
+    margin: 28px 0 12px;
   }
-  p { margin: 0 0 12px; }
-
-  .note { color: var(--muted); font-size: 15px; }
+  .note { font-family: var(--sans); color: var(--faint); font-size: 14px; margin: -8px 0 0; }
 
   /* Publications */
   ol.pubs { list-style: none; padding: 0; margin: 0; }
-  ol.pubs li { margin-bottom: 16px; }
-  .pub-title { font-weight: 600; }
-  .pub-authors { display: block; }
-  .pub-venue { display: block; font-style: italic; color: var(--muted); }
-  .pub-venue .honor { font-style: normal; color: var(--text); }
-  .me { text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--muted); }
+  ol.pubs li {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 18px;
+    padding: 12px 0;
+    border-top: 1px solid var(--rule);
+  }
+  ol.pubs li:first-child { border-top: 0; padding-top: 2px; }
+  .venue-tag {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.35;
+    padding-top: 3px;
+  }
+  .venue-tag small { display: block; font-weight: 400; color: var(--faint); font-size: 12.5px; }
+  .pub-title { font-weight: 600; display: block; line-height: 1.4; }
+  .pub-authors { display: block; color: var(--muted); font-size: 15.5px; margin-top: 2px; }
+  .pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-family: var(--sans);
+    font-size: 14px;
+    margin-top: 4px;
+    color: var(--faint);
+  }
+  .pub-meta .honor { color: #9a4a12; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .pub-meta .honor { color: #e3a26b; } }
+  .me { color: var(--text); font-weight: 600; }
+  .pub-meta .role-tag { color: var(--muted); }
 
   /* Dated entries */
-  .entry { margin-bottom: 18px; }
+  .entry { margin-bottom: 22px; }
   .entry-head {
     display: flex;
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
   }
-  .entry-head .when { color: var(--muted); white-space: nowrap; }
-  .entry .sub { color: var(--muted); }
-  .entry p { margin: 4px 0 0; }
+  .entry-head .when {
+    font-family: var(--sans);
+    font-size: 14.5px;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+  .entry .sub { font-family: var(--sans); font-size: 15px; color: var(--muted); }
+  .entry p { margin: 6px 0 0; }
 
   ul.plain { padding-left: 18px; margin: 0; }
   ul.plain li { margin-bottom: 6px; }
 
   footer {
-    margin-top: 56px;
+    margin-top: 64px;
     padding-top: 14px;
     border-top: 1px solid var(--rule);
-    color: var(--muted);
-    font-size: 14px;
+    font-family: var(--sans);
+    color: var(--faint);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16.5px; }
+    nav.top .name { display: none; }
+    nav.top ul { gap: 14px; font-size: 14px; }
+    main { padding-top: 28px; }
+    .intro { grid-template-columns: 88px 1fr; gap: 16px; align-items: center; }
+    .portrait { grid-row: auto; width: 88px; height: 106px; }
+    .bio { grid-column: 1 / -1; }
+    .portrait .initials { font-size: 28px; }
+    .intro h1 { font-size: 28px; }
+    .intro .role { margin-bottom: 0; }
+    ol.pubs li { grid-template-columns: 1fr; gap: 2px; }
   }
 </style>
 </head>
 <body>
+
+<nav class="top">
+  <div class="inner">
+    <a class="name" href="#">Owais Aijaz</a>
+    <ul>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#honors">Honors</a></li>
+      <li><a href="cv.pdf">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
 <main>
 
-  <header>
-    <!-- Put a square-ish photo named photo.jpg next to this file. Hidden if missing. -->
-    <img class="photo" src="photo.jpg" alt="Owais Aijaz" onerror="this.remove()">
-    <div>
-    <h1>Owais Aijaz</h1>
-    <p class="role">MSc student, Natural Language Processing · MBZUAI, Abu Dhabi</p>
-    <p class="links">
-      <a href="mailto:owaisaijaz2003@gmail.com">Email</a>
-      <a href="cv.pdf">CV</a>
-      <a href="https://scholar.google.com/citations?user=XZwiUB4AAAAJ">Google Scholar</a>
-      <a href="https://github.com/oa07610">GitHub</a>
-      <a href="https://www.linkedin.com/in/owais-aijaz">LinkedIn</a>
-    </p>
+  <header class="intro" id="about">
+    <!-- Photo: put a portrait named photo.jpg next to this file (roughly 5:6, e.g. 600x720).
+         Until then the initials below are shown. -->
+    <div class="portrait">
+      <img src="photo.jpg" alt="Owais Aijaz" onerror="this.remove()">
+      <span class="initials" aria-hidden="true">OA</span>
+    </div>
+
+    <div class="idtext">
+      <h1>Owais Aijaz</h1>
+      <p class="role">
+        MSc student in Natural Language Processing, MBZUAI<br>
+        Visiting Researcher, Macquarie University
+      </p>
+    </div>
+
+    <div class="bio">
+      <ul class="contact">
+        <li><a href="mailto:owaisaijaz2003@gmail.com">Email</a></li>
+        <li><a href="cv.pdf">CV</a></li>
+        <li><a href="https://scholar.google.com/citations?user=XZwiUB4AAAAJ">Google Scholar</a></li>
+        <li><a href="https://github.com/oa07610">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/owais-aijaz">LinkedIn</a></li>
+      </ul>
+
+      <p>
+        I am a master's student in Natural Language Processing at
+        <a href="https://mbzuai.ac.ae">MBZUAI</a>, advised by Preslav Nakov.
+        I am currently a visiting researcher at Macquarie University in Sydney,
+        working with Usman Naseem on cultural alignment in language models.
+        Before MBZUAI, I studied computer science at Habib University in Karachi.
+      </p>
+      <p>
+        My research is about the reliability of large language models: what a model
+        actually knows, when its answer is supported by that knowledge or by what it
+        retrieves, and how to tell the difference. I am most interested in these
+        questions in multilingual and underrepresented settings, such as Arabic, Urdu
+        and other Pakistani languages, where the failures are easiest to see. I also
+        work on interpretability of how models represent this knowledge, and on
+        evaluation methodology, including benchmark construction and contamination.
+      </p>
+      <p class="status">I am applying to PhD programs for Fall 2027.</p>
     </div>
   </header>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I am a master's student in Natural Language Processing at
-      <a href="https://mbzuai.ac.ae">MBZUAI</a>, advised by Preslav Nakov.
-      I am currently a visiting researcher at Macquarie University in Sydney,
-      working with Usman Naseem on cultural alignment in language models.
-      Before MBZUAI, I studied computer science at Habib University in Karachi.
-    </p>
-    <p>
-      My research is about the reliability of large language models: what a model
-      actually knows, when its answer is supported by that knowledge or by what it
-      retrieves, and how to tell the difference. I am most interested in these
-      questions in multilingual and underrepresented settings, such as Arabic, Urdu
-      and other Pakistani languages, where the failures are easiest to see. I also
-      work on interpretability of how models represent this knowledge, and on
-      evaluation methodology, including benchmark construction and contamination.
-    </p>
-    <p>I am applying to PhD programs for Fall 2027.</p>
-  </section>
 
   <section id="publications">
     <h2>Publications</h2>
@@ -174,63 +311,89 @@
     <h3>Conference</h3>
     <ol class="pubs">
       <li>
-        <span class="pub-title">Trust Before Fusion: QIMG-7 and Source-Aware Resolution for Polluted Multimodal RAG</span>
-        <span class="pub-authors">S. Eletter*, <span class="me">O. Aijaz</span>*, P. Nakov</span>
-        <span class="pub-venue">EMNLP 2026 (Main Conference) · <a href="https://aclanthology.org/2026.emnlp-main.1720/">paper</a></span>
+        <div class="venue-tag">EMNLP 2026<small>Main</small></div>
+        <div>
+          <span class="pub-title">Trust Before Fusion: QIMG-7 and Source-Aware Resolution for Polluted Multimodal RAG</span>
+          <span class="pub-authors">S. Eletter*, <span class="me">O. Aijaz</span>*, P. Nakov</span>
+          <div class="pub-meta"><span class="role-tag">co-first author</span><a href="https://aclanthology.org/2026.emnlp-main.1720/">paper</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">The Bottleneck Is Retrieval, Not Reading: Diagnosing Evidence-Based Generation with RAG for Long Context Question Answering</span>
-        <span class="pub-authors">D. Banerjee*, <span class="me">O. Aijaz</span>*, A. Tabassum*, Z. Xie, P. Nakov, V. Stoyanov</span>
-        <span class="pub-venue">EMNLP 2026 (Findings) · <a href="https://aclanthology.org/2026.findings-emnlp.2222/">paper</a> · <a href="https://arxiv.org/abs/2610.26951">arXiv</a></span>
+        <div class="venue-tag">EMNLP 2026<small>Findings</small></div>
+        <div>
+          <span class="pub-title">The Bottleneck Is Retrieval, Not Reading: Diagnosing Evidence-Based Generation with RAG for Long Context Question Answering</span>
+          <span class="pub-authors">D. Banerjee*, <span class="me">O. Aijaz</span>*, A. Tabassum*, Z. Xie, P. Nakov, V. Stoyanov</span>
+          <div class="pub-meta"><span class="role-tag">co-first author</span><a href="https://aclanthology.org/2026.findings-emnlp.2222/">paper</a><a href="https://arxiv.org/abs/2610.26951">arXiv</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">UrduMMLU: A Massive Multitask Benchmark for Urdu Language Understanding</span>
-        <span class="pub-authors">A. Tabassum*, S. Ahmad*, H. Iqbal*, <span class="me">O. Aijaz</span>, M. Ahsan, P. Nakov</span>
-        <span class="pub-venue">EMNLP 2026 (Main Conference) · <a href="https://aclanthology.org/2026.emnlp-main.450/">paper</a></span>
+        <div class="venue-tag">EMNLP 2026<small>Main</small></div>
+        <div>
+          <span class="pub-title">UrduMMLU: A Massive Multitask Benchmark for Urdu Language Understanding</span>
+          <span class="pub-authors">A. Tabassum*, S. Ahmad*, H. Iqbal*, <span class="me">O. Aijaz</span>, M. Ahsan, P. Nakov</span>
+          <div class="pub-meta"><a href="https://aclanthology.org/2026.emnlp-main.450/">paper</a></div>
+        </div>
       </li>
     </ol>
 
-    <h3>Workshop</h3>
+    <h3>Workshop and shared task papers</h3>
     <ol class="pubs">
       <li>
-        <span class="pub-title">Ignorance Is Shared, Knowledge Is Private: Efficiently Mapping Knowledge Boundaries</span>
-        <span class="pub-authors"><span class="me">O. Aijaz</span>, N. Ranjan, M. Maqsood, A. Tabassum, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
-        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026 · <span class="honor">Oral</span> · <a href="https://openreview.net/forum?id=cHPJ1wCLtx">paper</a></span>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div>
+          <span class="pub-title">Ignorance Is Shared, Knowledge Is Private: Efficiently Mapping Knowledge Boundaries</span>
+          <span class="pub-authors"><span class="me">O. Aijaz</span>, N. Ranjan, M. Maqsood, A. Tabassum, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
+          <div class="pub-meta"><span class="honor">Oral</span><span class="role-tag">first author</span><a href="https://openreview.net/forum?id=cHPJ1wCLtx">paper</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">Minimum Sufficient Reasoning: How Much Chain-of-Thought Does Training Data Need?</span>
-        <span class="pub-authors">M. Maqsood, N. Ranjan, <span class="me">O. Aijaz</span>, A. Tabassum, H. Li, H. X. Ren, Z. Liu, E. P. Xing</span>
-        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026 · <a href="https://openreview.net/forum?id=ali6mfCRJl">paper</a></span>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div>
+          <span class="pub-title">Minimum Sufficient Reasoning: How Much Chain-of-Thought Does Training Data Need?</span>
+          <span class="pub-authors">M. Maqsood, N. Ranjan, <span class="me">O. Aijaz</span>, A. Tabassum, H. Li, H. X. Ren, Z. Liu, E. P. Xing</span>
+          <div class="pub-meta"><a href="https://openreview.net/forum?id=ali6mfCRJl">paper</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">Safety Lost in Translation: Usable Yield and the Cost of Thinking in Safety-Data Localization</span>
-        <span class="pub-authors">A. Tabassum, N. Ranjan, M. Maqsood, <span class="me">O. Aijaz</span>, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
-        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026 · <a href="https://openreview.net/forum?id=EEauqNZYov">paper</a></span>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div>
+          <span class="pub-title">Safety Lost in Translation: Usable Yield and the Cost of Thinking in Safety-Data Localization</span>
+          <span class="pub-authors">A. Tabassum, N. Ranjan, M. Maqsood, <span class="me">O. Aijaz</span>, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
+          <div class="pub-meta"><a href="https://openreview.net/forum?id=EEauqNZYov">paper</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">Oath Breakers at SemEval-2025 Task 06: PromiseEval</span>
-        <span class="pub-authors">M. K. Mukaddam*, <span class="me">O. Aijaz</span>*, A. Enayat</span>
-        <span class="pub-venue">SemEval-2025, ACL · <span class="honor">2nd place, English leaderboard</span> · <a href="https://aclanthology.org/2025.semeval-1.225/">paper</a></span>
+        <div class="venue-tag">SemEval 2025<small>ACL</small></div>
+        <div>
+          <span class="pub-title">Oath Breakers at SemEval-2025 Task 06: PromiseEval</span>
+          <span class="pub-authors">M. K. Mukaddam*, <span class="me">O. Aijaz</span>*, A. Enayat</span>
+          <div class="pub-meta"><span class="honor">2nd place, English leaderboard</span><a href="https://aclanthology.org/2025.semeval-1.225/">paper</a></div>
+        </div>
       </li>
       <li>
-        <span class="pub-title">Team Sharingans at SimpleText: Fine-Tuned LLM Based Approach to Scientific Text Simplification</span>
-        <span class="pub-authors">S. M. Ali, H. Sajid, <span class="me">O. Aijaz</span>, O. Waheed, F. Alvi, A. Samad</span>
-        <span class="pub-venue">CLEF 2024 Working Notes (CEUR-WS) · <span class="honor">Top-5 finish</span></span>
+        <div class="venue-tag">CLEF 2024<small>Working Notes</small></div>
+        <div>
+          <span class="pub-title">Team Sharingans at SimpleText: Fine-Tuned LLM Based Approach to Scientific Text Simplification</span>
+          <span class="pub-authors">S. M. Ali, H. Sajid, <span class="me">O. Aijaz</span>, O. Waheed, F. Alvi, A. Samad</span>
+          <div class="pub-meta"><span class="honor">Top-5 finish</span><a href="https://ceur-ws.org/Vol-3740/paper-309.pdf">paper</a></div>
+        </div>
       </li>
     </ol>
 
     <h3>Under review</h3>
     <ol class="pubs">
       <li>
-        <span class="pub-title">SciDER: Scientific Data-Centric End-to-End Researcher</span>
-        <span class="pub-authors">K. Lin, <span class="me">O. Aijaz</span>, Y. Lu, Y. Luo, X. Guo, W. Chen, P. Nakov</span>
-        <span class="pub-venue">ACL Rolling Review</span>
+        <div class="venue-tag">ACL ARR</div>
+        <div>
+          <span class="pub-title">SciDER: Scientific Data-Centric End-to-End Researcher</span>
+          <span class="pub-authors">K. Lin, <span class="me">O. Aijaz</span>, Y. Lu, Y. Luo, X. Guo, W. Chen, P. Nakov</span>
+        </div>
       </li>
     </ol>
   </section>
 
   <section id="research">
-    <h2>Research</h2>
+    <h2>Research Experience</h2>
 
     <div class="entry">
       <div class="entry-head">
@@ -243,7 +406,7 @@
         answers in a given language, and where in the model that choice is made. Leading
         KINSHIFT, a kinship-reasoning benchmark for Urdu, Sindhi, Punjabi and Pashto in
         native and Roman scripts, and extending it to localization and steering of the
-        responsible model components.
+        responsible model components. First-author paper in preparation.
       </p>
     </div>
 
@@ -257,7 +420,8 @@
         Retrieval-augmented generation and long-context QA. Showed that failures usually
         attributed to reading are driven mainly by retrieval coverage, and built QIMG-7,
         a paired clean/polluted benchmark showing that polluted retrieved text is the main
-        failure channel in multimodal RAG. Contributed to UrduMMLU, a natively authored
+        failure channel in multimodal RAG. Two EMNLP 2026 papers, co-first author on both.
+        Contributed to UrduMMLU, a natively authored
         Urdu benchmark of 26,389 questions.
       </p>
     </div>
@@ -273,7 +437,7 @@
         Arabic/English bank, and built a fine-tuning set restricted to facts the model
         already knew. Also designed verifiable-reward RL tasks for Arabic morphology,
         i'rab and poetry, and built bilingual agentic search trajectories grounded in
-        retrieved documents.
+        retrieved documents. First author on the resulting COLM 2026 workshop paper.
       </p>
     </div>
   </section>
