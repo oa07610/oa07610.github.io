@@ -9,7 +9,7 @@
 <meta name="description" content="Owais Aijaz, MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --text: #1f1f1f;
@@ -18,7 +18,7 @@
     --link: #0b57d0;
     --accent: #b3261e;
     --bg: #ffffff;
-    --sans: "Google Sans Flex", "Helvetica Neue", Arial, sans-serif;
+    --sans: Figtree, "Helvetica Neue", Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -112,7 +112,8 @@
   .status { font-weight: 500; color: var(--accent); }
 
   /* Sections */
-  section { margin-top: 64px; scroll-margin-top: 64px; }
+  section { margin-top: 56px; scroll-margin-top: 64px; }
+  .intro + section { margin-top: 30px; }
   h2 {
     font-size: 26px;
     font-weight: 600;
@@ -141,6 +142,7 @@
     line-height: 1.35;
     padding-top: 1px;
   }
+  .venue-tag .track { display: block; }
   .venue-tag small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); }
   .pub-title { display: block; line-height: 1.4; font-weight: 500; color: var(--text); }
   a.pub-title { color: var(--link); }
@@ -186,7 +188,8 @@
     nav.top .name { display: none; }
     nav.top ul { gap: 14px; font-size: 14px; }
     main { padding-top: 28px; }
-    section { margin-top: 48px; }
+    section { margin-top: 44px; }
+    .intro + section { margin-top: 24px; }
     h2 { font-size: 23px; }
     .intro { grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
     .portrait { grid-row: auto; width: 96px; height: 115px; }
@@ -195,6 +198,7 @@
     .intro .role { margin-bottom: 0; font-size: 14px; }
     ol.pubs li { grid-template-columns: 1fr; gap: 0; }
     .venue-tag small { display: inline; margin-left: 6px; }
+    .venue-tag .track { display: inline; margin-left: 5px; }
   }
 </style>
 </head>
@@ -233,7 +237,7 @@
 
     <div class="bio">
       <ul class="contact">
-        <li><a href="mailto:owaisaijaz2003@gmail.com">Email</a></li>
+        <li><a href="mailto:owais.aijaz@mbzuai.ac.ae">Email</a></li>
         <li><a href="cv.pdf">CV</a></li>
         <li><a href="https://scholar.google.com/citations?user=XZwiUB4AAAAJ">Google Scholar</a></li>
         <li><a href="https://github.com/oa07610">GitHub</a></li>
@@ -267,27 +271,27 @@
     <h3>Conference</h3>
     <ol class="pubs">
       <li>
-        <div class="venue-tag">EMNLP 2026<small>Main</small></div>
+        <div class="venue-tag">EMNLP 2026<span class="track">Main</span></div>
         <div>
           <a class="pub-title" href="https://aclanthology.org/2026.emnlp-main.1720/">Trust Before Fusion: QIMG-7 and Source-Aware Resolution for Polluted Multimodal RAG</a>
           <span class="pub-authors">S. Eletter*, <span class="me">O. Aijaz</span>*, P. Nakov</span>
-          <div class="pub-meta"><span class="role-tag">co-first author</span></div>
+          <div class="pub-meta"><a href="https://github.com/mbzuai-nlp/Trust_Before_Fusion">Code</a></div>
         </div>
       </li>
       <li>
-        <div class="venue-tag">EMNLP 2026<small>Findings</small></div>
+        <div class="venue-tag">EMNLP 2026<span class="track">Findings</span></div>
         <div>
           <a class="pub-title" href="https://aclanthology.org/2026.findings-emnlp.2222/">The Bottleneck Is Retrieval, Not Reading: Diagnosing Evidence-Based Generation with RAG for Long Context Question Answering</a>
           <span class="pub-authors">D. Banerjee*, <span class="me">O. Aijaz</span>*, A. Tabassum*, Z. Xie, P. Nakov, V. Stoyanov</span>
-          <div class="pub-meta"><span class="role-tag">co-first author</span><a href="https://arxiv.org/abs/2610.26951">arXiv</a></div>
+          <div class="pub-meta"><a href="https://arxiv.org/abs/2610.26951">arXiv</a><a href="https://github.com/mbzuai-nlp/LC-EBG">Code</a></div>
         </div>
       </li>
       <li>
-        <div class="venue-tag">EMNLP 2026<small>Main</small></div>
+        <div class="venue-tag">EMNLP 2026<span class="track">Main</span></div>
         <div>
           <a class="pub-title" href="https://aclanthology.org/2026.emnlp-main.450/">UrduMMLU: A Massive Multitask Benchmark for Urdu Language Understanding</a>
           <span class="pub-authors">A. Tabassum*, S. Ahmad*, H. Iqbal*, <span class="me">O. Aijaz</span>, M. Ahsan, P. Nakov</span>
-          <div class="pub-meta"></div>
+          <div class="pub-meta"><a href="https://arxiv.org/abs/2606.07167">arXiv</a><a href="https://github.com/mbzuai-nlp/UrduMMLU">Code</a></div>
         </div>
       </li>
     </ol>
@@ -299,7 +303,7 @@
         <div>
           <a class="pub-title" href="https://openreview.net/forum?id=cHPJ1wCLtx">Ignorance Is Shared, Knowledge Is Private: Efficiently Mapping Knowledge Boundaries</a>
           <span class="pub-authors"><span class="me">O. Aijaz</span>, N. Ranjan, M. Maqsood, A. Tabassum, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
-          <div class="pub-meta"><span class="honor">Oral</span><span class="role-tag">first author</span></div>
+          <div class="pub-meta"><span class="honor">Oral</span></div>
         </div>
       </li>
       <li>
@@ -380,6 +384,21 @@
 
     <div class="entry">
       <div class="entry-head">
+        <span><strong>Institute of Foundation Models, MBZUAI</strong></span>
+        <span class="when">Jun 2026 – Aug 2026</span>
+      </div>
+      <div class="sub">Research Intern, Jais-3 Data Team</div>
+      <p>
+        Mapped the knowledge boundaries of five open LLMs (8B–120B) over a 791K-fact
+        Arabic/English bank, and built a fine-tuning set restricted to facts the model
+        already knew. Also designed verifiable-reward RL tasks for Arabic morphology,
+        i'rab and poetry, and built bilingual agentic search trajectories grounded in
+        retrieved documents. First author on the resulting COLM 2026 workshop paper. Co-author of the <a href="https://arxiv.org/abs/2611.10224">Jais 3 technical report</a>.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
         <span><strong>MBZUAI</strong>, Abu Dhabi</span>
         <span class="when">Aug 2025 – present</span>
       </div>
@@ -391,21 +410,6 @@
         failure channel in multimodal RAG. Two EMNLP 2026 papers, co-first author on both.
         Contributed to UrduMMLU, a natively authored
         Urdu benchmark of 26,389 questions.
-      </p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span><strong>Institute of Foundation Models, MBZUAI</strong></span>
-        <span class="when">Jun 2026 – Aug 2026</span>
-      </div>
-      <div class="sub">Research Intern, Jais-3 Data Team</div>
-      <p>
-        Mapped the knowledge boundaries of five open LLMs (8B–120B) over a 791K-fact
-        Arabic/English bank, and built a fine-tuning set restricted to facts the model
-        already knew. Also designed verifiable-reward RL tasks for Arabic morphology,
-        i'rab and poetry, and built bilingual agentic search trajectories grounded in
-        retrieved documents. First author on the resulting COLM 2026 workshop paper. Co-author of the <a href="https://arxiv.org/abs/2611.10224">Jais 3 technical report</a>.
       </p>
     </div>
   </section>
@@ -441,7 +445,6 @@
       <li>Global Undergraduate Exchange Program, US Department of State (selected from 35,000+ applicants), 2023</li>
       <li>TOPS Scholar, full merit scholarship, Habib University</li>
       <li>Dean's List, Habib University, Fall 2022 and Spring 2024</li>
-      <li>2nd place (English), SemEval-2025 PromiseEval; top-5, CLEF 2024 SimpleText</li>
     </ul>
   </section>
 
