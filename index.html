@@ -4,29 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%230d5c63%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%231f3f73%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E">
 <title>Owais Aijaz</title>
 <meta name="description" content="Owais Aijaz — MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --text: #1b1b1b;
-    --muted: #5c5c5c;
-    --faint: #6f6f6f;
-    --rule: #e6e6e6;
+    --text: #1a1a1a;
+    --muted: #555555;
+    --faint: #6b6b6b;
+    --rule: #dddddd;
+    --link: #1f3f73;
     --bg: #ffffff;
-    --teal: #0d5c63;
-    --teal-soft: #e7f1f1;
-    --brick: #b3471d;
-    --brick-soft: #fbeee6;
-    --violet: #5a3d97;
-    --violet-soft: #f1edf8;
-    --amber: #87540f;
-    --amber-soft: #fbf2e2;
-    --serif: "Newsreader", Georgia, "Times New Roman", serif;
-    --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --serif: "EB Garamond", Garamond, "Times New Roman", serif;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -36,41 +28,41 @@
     background: var(--bg);
     color: var(--text);
     font-family: var(--serif);
-    font-size: 18.5px;
-    line-height: 1.6;
-    border-top: 4px solid var(--teal);
+    font-size: 20px;
+    line-height: 1.55;
+    font-feature-settings: "kern", "liga", "onum";
   }
-  a { color: var(--teal); text-decoration: none; }
+  a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-  ::selection { background: var(--brick-soft); }
+  .sc { font-variant-caps: all-small-caps; letter-spacing: 0.05em; }
 
   /* Top bar */
   nav.top {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--rule);
-    font-family: var(--sans);
-    font-size: 14px;
   }
   nav.top .inner {
-    max-width: 800px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 11px 20px;
+    padding: 9px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     gap: 16px;
   }
-  nav.top .name { color: var(--text); font-family: var(--serif); font-size: 18px; font-weight: 600; }
-  nav.top ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; flex-wrap: wrap; }
+  nav.top .name { color: var(--text); font-size: 20px; }
+  nav.top ul {
+    list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; flex-wrap: wrap;
+    font-variant-caps: all-small-caps; letter-spacing: 0.06em; font-size: 19px;
+  }
   nav.top ul a { color: var(--muted); }
-  nav.top ul a:hover { color: var(--teal); text-decoration: none; }
+  nav.top ul a:hover { color: var(--link); text-decoration: none; }
 
   main {
-    max-width: 800px;
+    max-width: 780px;
     margin: 0 auto;
     padding: 52px 20px 72px;
   }
@@ -78,19 +70,19 @@
   /* Intro */
   .intro {
     display: grid;
-    grid-template-columns: 176px 1fr;
+    grid-template-columns: 160px 1fr;
     gap: 0 40px;
     align-items: start;
   }
   .portrait {
     position: relative;
-    width: 168px;
-    height: 202px;
-    background: var(--teal-soft);
+    width: 160px;
+    height: 192px;
+    background: #f4f4f2;
+    border: 1px solid var(--rule);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 8px 8px 0 var(--brick-soft);
     grid-row: 1 / span 2;
   }
   .portrait img {
@@ -102,168 +94,126 @@
     display: block;
     z-index: 1;
   }
-  .portrait .initials {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 48px;
-    color: var(--teal);
-  }
+  .portrait .initials { font-size: 46px; color: #9a9a96; font-variant-caps: all-small-caps; letter-spacing: 0.06em; }
   .idtext { grid-column: 2; }
   .bio { grid-column: 2; }
   .intro h1 {
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 500;
-    line-height: 1.1;
-    margin: 0 0 8px;
-    letter-spacing: -0.015em;
+    line-height: 1.05;
+    margin: 0 0 10px;
   }
   .intro .role {
-    font-family: var(--sans);
     color: var(--muted);
-    font-size: 15px;
-    margin: 0 0 14px;
-    line-height: 1.55;
+    margin: 0 0 12px;
+    line-height: 1.45;
   }
   .contact {
-    font-family: var(--sans);
-    font-size: 14.5px;
-    font-weight: 500;
     display: flex;
     flex-wrap: wrap;
-    gap: 2px 8px;
-    margin: 0 0 24px;
+    gap: 0 10px;
+    margin: 0 0 22px;
     padding: 0;
     list-style: none;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.06em;
+    font-size: 20px;
   }
-  .contact li + li::before { content: "/"; color: #c4c4c4; margin-right: 8px; font-weight: 400; }
+  .contact li + li::before { content: "·"; color: var(--faint); margin-right: 10px; }
   .intro p { margin: 0 0 13px; }
-  .status em {
-    font-style: italic;
-    background: linear-gradient(transparent 58%, var(--brick-soft) 58%);
-    padding: 0 2px;
-  }
+  .status { font-style: italic; }
 
   /* Sections */
-  section { margin-top: 60px; scroll-margin-top: 68px; }
+  section { margin-top: 56px; scroll-margin-top: 64px; }
   h2 {
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 500;
-    margin: 0 0 20px;
-    letter-spacing: -0.01em;
-  }
-  h2::before {
-    content: "§";
-    color: var(--brick);
-    margin-right: 10px;
-    font-weight: 400;
+    margin: 0 0 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+    font-variant-caps: small-caps;
+    letter-spacing: 0.03em;
   }
   h3 {
-    font-family: var(--sans);
-    font-size: 12.5px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--teal);
-    margin: 30px 0 10px;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    margin: 26px 0 8px;
   }
-  .note { font-family: var(--sans); color: var(--faint); font-size: 13.5px; margin: -12px 0 0; }
+  .note { color: var(--faint); font-size: 17px; margin: -8px 0 0; }
 
   /* Publications */
   ol.pubs { list-style: none; padding: 0; margin: 0; }
   ol.pubs li {
     display: grid;
-    grid-template-columns: 124px 1fr;
+    grid-template-columns: 118px 1fr;
     gap: 20px;
-    padding: 14px 0;
-    border-top: 1px solid var(--rule);
+    padding: 9px 0;
   }
-  ol.pubs li:first-child { border-top: 0; padding-top: 4px; }
   .venue-tag {
-    font-family: var(--sans);
-    font-size: 12.5px;
-    font-weight: 600;
-    line-height: 1.35;
-    padding: 5px 9px;
-    border-radius: 3px;
-    align-self: start;
-    color: var(--teal);
-    background: var(--teal-soft);
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    line-height: 1.3;
+    padding-top: 2px;
   }
-  .venue-tag small { display: block; font-weight: 400; font-size: 11.5px; opacity: 0.85; }
-  .v-colm   { color: var(--violet); background: var(--violet-soft); }
-  .v-task   { color: var(--amber);  background: var(--amber-soft); }
-  .v-review { color: var(--muted);  background: #f2f2f2; }
-  .pub-title { font-weight: 600; display: block; line-height: 1.35; font-size: 18.5px; color: var(--text); }
-  a.pub-title:hover { color: var(--teal); }
-  a.pub-title::after { content: " ↗"; font-weight: 400; color: var(--teal); font-size: 0.8em; }
-  .pub-authors { display: block; color: var(--muted); font-size: 16px; margin-top: 3px; }
+  .venue-tag small { display: block; font-size: 17px; font-variant-caps: normal; letter-spacing: 0; font-style: italic; color: var(--faint); }
+  .pub-title { display: block; line-height: 1.3; font-weight: 500; color: var(--text); }
+  a.pub-title { color: var(--link); }
+  .pub-authors { display: block; color: var(--muted); font-size: 18px; margin-top: 2px; }
   .pub-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 14px;
-    font-family: var(--sans);
-    font-size: 13.5px;
-    margin-top: 5px;
+    gap: 0 12px;
+    font-size: 17.5px;
+    font-style: italic;
     color: var(--faint);
   }
   .pub-meta:empty { display: none; }
-  .pub-meta .honor { color: var(--brick); font-weight: 600; }
-  .pub-meta .role-tag { color: var(--muted); }
+  .pub-meta .honor { color: var(--text); font-style: italic; font-weight: 600; }
+  .pub-meta a { font-style: normal; font-variant-caps: all-small-caps; letter-spacing: 0.05em; }
   .me { color: var(--text); font-weight: 600; }
 
   /* Dated entries */
-  .entry {
-    margin-bottom: 26px;
-    padding-left: 18px;
-    border-left: 2px solid #c6dddd;
-  }
+  .entry { margin-bottom: 22px; }
   .entry-head {
     display: flex;
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
-    font-size: 19px;
+    align-items: baseline;
   }
   .entry-head strong { font-weight: 600; }
-  .entry-head .when {
-    font-family: var(--sans);
-    font-size: 13.5px;
-    color: var(--faint);
-    white-space: nowrap;
-    padding-top: 4px;
-  }
-  .entry .sub { font-family: var(--sans); font-size: 14.5px; color: var(--teal); }
-  .entry p { margin: 6px 0 0; }
+  .entry-head .when { color: var(--faint); white-space: nowrap; font-size: 18px; }
+  .entry .sub { color: var(--muted); font-style: italic; }
+  .entry p { margin: 4px 0 0; }
 
-  ul.plain { padding-left: 0; margin: 0; list-style: none; }
-  ul.plain li { margin-bottom: 8px; padding-left: 22px; position: relative; }
-  ul.plain li::before { content: "◆"; position: absolute; left: 0; top: 1px; color: var(--brick); font-size: 11px; }
+  ul.plain { padding-left: 20px; margin: 0; }
+  ul.plain li { margin-bottom: 4px; }
 
   footer {
-    margin-top: 68px;
-    padding-top: 14px;
+    margin-top: 64px;
+    padding-top: 12px;
     border-top: 1px solid var(--rule);
-    font-family: var(--sans);
     color: var(--faint);
-    font-size: 13px;
+    font-size: 16px;
+    font-style: italic;
   }
 
   @media (max-width: 640px) {
-    body { font-size: 17px; }
+    body { font-size: 18.5px; }
     nav.top .name { display: none; }
-    nav.top ul { gap: 14px; font-size: 13.5px; }
+    nav.top ul { gap: 14px; font-size: 18px; }
     main { padding-top: 30px; }
-    .intro { grid-template-columns: 92px 1fr; gap: 18px; align-items: center; }
-    .portrait { grid-row: auto; width: 88px; height: 106px; box-shadow: 5px 5px 0 var(--brick-soft); }
-    .bio { grid-column: 1 / -1; margin-top: 4px; }
+    .intro { grid-template-columns: 88px 1fr; gap: 18px; align-items: center; }
+    .portrait { grid-row: auto; width: 88px; height: 106px; }
     .portrait .initials { font-size: 30px; }
-    .intro h1 { font-size: 31px; }
-    .intro .role { margin-bottom: 0; font-size: 14px; }
-    h2 { font-size: 24px; }
-    ol.pubs li { grid-template-columns: 1fr; gap: 8px; }
-    .venue-tag { justify-self: start; }
-    .venue-tag small { display: inline; margin-left: 4px; }
-    .pub-title { font-size: 17.5px; }
+    .bio { grid-column: 1 / -1; margin-top: 6px; }
+    .intro h1 { font-size: 34px; }
+    .intro .role { margin-bottom: 0; font-size: 17px; }
+    ol.pubs li { grid-template-columns: 1fr; gap: 0; }
+    .venue-tag small { display: inline; margin-left: 6px; }
   }
 </style>
 </head>
@@ -296,7 +246,8 @@
       <h1>Owais Aijaz</h1>
       <p class="role">
         MSc student in Natural Language Processing, MBZUAI<br>
-        Visiting Researcher, Macquarie University
+        Advisor: <a href="https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov">Preslav Nakov</a><br>
+        Visiting Researcher, Macquarie University, with <a href="https://usmaann.github.io/">Usman Naseem</a>
       </p>
     </div>
 
@@ -311,9 +262,9 @@
 
       <p>
         I am a master's student in Natural Language Processing at
-        <a href="https://mbzuai.ac.ae">MBZUAI</a>, advised by Preslav Nakov.
+        <a href="https://mbzuai.ac.ae">MBZUAI</a>, advised by <a href="https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov">Preslav Nakov</a>.
         I am currently a visiting researcher at Macquarie University in Sydney,
-        working with Usman Naseem on cultural alignment in language models.
+        working with <a href="https://usmaann.github.io/">Usman Naseem</a> on cultural alignment in language models.
         Before MBZUAI, I studied computer science at Habib University in Karachi.
       </p>
       <p>
@@ -325,7 +276,7 @@
         work on interpretability of how models represent this knowledge, and on
         evaluation methodology, including benchmark construction and contamination.
       </p>
-      <p class="status"><em>I am applying to PhD programs for Fall 2027.</em></p>
+      <p class="status">I am applying to PhD programs for Fall 2027.</p>
     </div>
   </header>
 
@@ -364,7 +315,7 @@
     <h3>Workshop and shared task papers</h3>
     <ol class="pubs">
       <li>
-        <div class="venue-tag v-colm">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
         <div>
           <a class="pub-title" href="https://openreview.net/forum?id=cHPJ1wCLtx">Ignorance Is Shared, Knowledge Is Private: Efficiently Mapping Knowledge Boundaries</a>
           <span class="pub-authors"><span class="me">O. Aijaz</span>, N. Ranjan, M. Maqsood, A. Tabassum, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
@@ -372,7 +323,7 @@
         </div>
       </li>
       <li>
-        <div class="venue-tag v-colm">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
         <div>
           <a class="pub-title" href="https://openreview.net/forum?id=ali6mfCRJl">Minimum Sufficient Reasoning: How Much Chain-of-Thought Does Training Data Need?</a>
           <span class="pub-authors">M. Maqsood, N. Ranjan, <span class="me">O. Aijaz</span>, A. Tabassum, H. Li, H. X. Ren, Z. Liu, E. P. Xing</span>
@@ -380,7 +331,7 @@
         </div>
       </li>
       <li>
-        <div class="venue-tag v-colm">COLM 2026<small>Efficient Reasoning Workshop</small></div>
+        <div class="venue-tag">COLM 2026<small>Efficient Reasoning Workshop</small></div>
         <div>
           <a class="pub-title" href="https://openreview.net/forum?id=EEauqNZYov">Safety Lost in Translation: Usable Yield and the Cost of Thinking in Safety-Data Localization</a>
           <span class="pub-authors">A. Tabassum, N. Ranjan, M. Maqsood, <span class="me">O. Aijaz</span>, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
@@ -388,7 +339,7 @@
         </div>
       </li>
       <li>
-        <div class="venue-tag v-task">SemEval 2025<small>ACL</small></div>
+        <div class="venue-tag">SemEval 2025<small>ACL</small></div>
         <div>
           <a class="pub-title" href="https://aclanthology.org/2025.semeval-1.225/">Oath Breakers at SemEval-2025 Task 06: PromiseEval</a>
           <span class="pub-authors">M. K. Mukaddam*, <span class="me">O. Aijaz</span>*, A. Enayat</span>
@@ -396,7 +347,7 @@
         </div>
       </li>
       <li>
-        <div class="venue-tag v-task">CLEF 2024<small>Working Notes</small></div>
+        <div class="venue-tag">CLEF 2024<small>Working Notes</small></div>
         <div>
           <a class="pub-title" href="https://ceur-ws.org/Vol-3740/paper-309.pdf">Team Sharingans at SimpleText: Fine-Tuned LLM Based Approach to Scientific Text Simplification</a>
           <span class="pub-authors">S. M. Ali, H. Sajid, <span class="me">O. Aijaz</span>, O. Waheed, F. Alvi, A. Samad</span>
@@ -408,7 +359,7 @@
     <h3>Under review</h3>
     <ol class="pubs">
       <li>
-        <div class="venue-tag v-review">ACL ARR</div>
+        <div class="venue-tag">ACL ARR</div>
         <div>
           <span class="pub-title">SciDER: Scientific Data-Centric End-to-End Researcher</span>
           <span class="pub-authors">K. Lin, <span class="me">O. Aijaz</span>, Y. Lu, Y. Luo, X. Guo, W. Chen, P. Nakov</span>
@@ -425,7 +376,7 @@
         <span><strong>Macquarie University</strong>, Sydney</span>
         <span class="when">Sep 2026 – present</span>
       </div>
-      <div class="sub">Visiting Researcher, School of Computing · with Usman Naseem</div>
+      <div class="sub">Visiting Researcher, School of Computing · with <a href="https://usmaann.github.io/">Usman Naseem</a></div>
       <p>
         Cultural alignment in language models: whose norms a model reproduces when it
         answers in a given language, and where in the model that choice is made. Leading
@@ -440,7 +391,7 @@
         <span><strong>MBZUAI</strong>, Abu Dhabi</span>
         <span class="when">Aug 2025 – present</span>
       </div>
-      <div class="sub">Graduate Researcher · with Preslav Nakov</div>
+      <div class="sub">Graduate Researcher · advised by <a href="https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov">Preslav Nakov</a></div>
       <p>
         Retrieval-augmented generation and long-context QA. Showed that failures usually
         attributed to reading are driven mainly by retrieval coverage, and built QIMG-7,
