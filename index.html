@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owais Aijaz</title>
+<meta name="description" content="Owais Aijaz — MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text: #1f1f1f;
+    --muted: #6b6b6b;
+    --rule: #e2e2e2;
+    --link: #1a4f8b;
+    --bg: #fdfdfb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e6e4df;
+      --muted: #9a978f;
+      --rule: #34332f;
+      --link: #8fb4e0;
+      --bg: #1b1b19;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 20px 80px;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  header .photo {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  @media (max-width: 520px) {
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    header .photo { width: 104px; height: 104px; }
+  }
+  header h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  header .role { color: var(--muted); margin: 0 0 14px; }
+  header .links { margin: 0; }
+  header .links a + a::before {
+    content: "·";
+    color: var(--muted);
+    margin: 0 8px;
+    display: inline-block;
+  }
+
+  section { margin-top: 44px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 22px 0 8px;
+  }
+  p { margin: 0 0 12px; }
+
+  .note { color: var(--muted); font-size: 15px; }
+
+  /* Publications */
+  ol.pubs { list-style: none; padding: 0; margin: 0; }
+  ol.pubs li { margin-bottom: 16px; }
+  .pub-title { font-weight: 600; }
+  .pub-authors { display: block; }
+  .pub-venue { display: block; font-style: italic; color: var(--muted); }
+  .pub-venue .honor { font-style: normal; color: var(--text); }
+  .me { text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--muted); }
+
+  /* Dated entries */
+  .entry { margin-bottom: 18px; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .entry-head .when { color: var(--muted); white-space: nowrap; }
+  .entry .sub { color: var(--muted); }
+  .entry p { margin: 4px 0 0; }
+
+  ul.plain { padding-left: 18px; margin: 0; }
+  ul.plain li { margin-bottom: 6px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <!-- Put a square-ish photo named photo.jpg next to this file. Hidden if missing. -->
+    <img class="photo" src="photo.jpg" alt="Owais Aijaz" onerror="this.remove()">
+    <div>
+    <h1>Owais Aijaz</h1>
+    <p class="role">MSc student, Natural Language Processing · MBZUAI, Abu Dhabi</p>
+    <p class="links">
+      <a href="mailto:owaisaijaz2003@gmail.com">Email</a>
+      <a href="cv.pdf">CV</a>
+      <a href="https://scholar.google.com/citations?user=XZwiUB4AAAAJ">Google Scholar</a>
+      <a href="https://github.com/oa07610">GitHub</a>
+      <a href="https://www.linkedin.com/in/owais-aijaz">LinkedIn</a>
+    </p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a master's student in Natural Language Processing at
+      <a href="https://mbzuai.ac.ae">MBZUAI</a>, advised by Preslav Nakov.
+      I am currently a visiting researcher at Macquarie University in Sydney,
+      working with Usman Naseem on cultural alignment in language models.
+      Before MBZUAI, I studied computer science at Habib University in Karachi.
+    </p>
+    <p>
+      My research is about the reliability of large language models: what a model
+      actually knows, when its answer is supported by that knowledge or by what it
+      retrieves, and how to tell the difference. I am most interested in these
+      questions in multilingual and underrepresented settings, such as Arabic, Urdu
+      and other Pakistani languages, where the failures are easiest to see. I also
+      work on interpretability of how models represent this knowledge, and on
+      evaluation methodology, including benchmark construction and contamination.
+    </p>
+    <p>I am applying to PhD programs for Fall 2027.</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="note">* equal contribution</p>
+
+    <h3>Conference</h3>
+    <ol class="pubs">
+      <li>
+        <span class="pub-title">Trust Before Fusion: QIMG-7 and Source-Aware Resolution for Polluted Multimodal RAG</span>
+        <span class="pub-authors">S. Eletter*, <span class="me">O. Aijaz</span>*, P. Nakov</span>
+        <span class="pub-venue">EMNLP 2026 (Main Conference)</span>
+      </li>
+      <li>
+        <span class="pub-title">The Bottleneck Is Retrieval, Not Reading: Diagnosing Evidence-Based Generation with RAG for Long Context Question Answering</span>
+        <span class="pub-authors">D. Banerjee*, <span class="me">O. Aijaz</span>*, A. Tabassum*, Z. Xie, P. Nakov, V. Stoyanov</span>
+        <span class="pub-venue">EMNLP 2026 (Findings) · <a href="https://arxiv.org/abs/2610.26951">arXiv</a></span>
+      </li>
+      <li>
+        <span class="pub-title">UrduMMLU: A Massive Multitask Benchmark for Urdu Language Understanding</span>
+        <span class="pub-authors">A. Tabassum*, S. Ahmad*, H. Iqbal*, <span class="me">O. Aijaz</span>, M. Ahsan, P. Nakov</span>
+        <span class="pub-venue">EMNLP 2026 (Main Conference)</span>
+      </li>
+    </ol>
+
+    <h3>Workshop</h3>
+    <ol class="pubs">
+      <li>
+        <span class="pub-title">Ignorance Is Shared, Knowledge Is Private: Efficiently Mapping Knowledge Boundaries</span>
+        <span class="pub-authors"><span class="me">O. Aijaz</span>, N. Ranjan, M. Maqsood, A. Tabassum, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
+        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026 · <span class="honor">Spotlight</span></span>
+      </li>
+      <li>
+        <span class="pub-title">Minimum Sufficient Reasoning: How Much Chain-of-Thought Does Training Data Need?</span>
+        <span class="pub-authors">M. Maqsood, N. Ranjan, <span class="me">O. Aijaz</span>, A. Tabassum, H. Li, H. X. Ren, Z. Liu, E. P. Xing</span>
+        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026</span>
+      </li>
+      <li>
+        <span class="pub-title">Safety Lost in Translation: Usable Yield and the Cost of Thinking in Safety-Data Localization</span>
+        <span class="pub-authors">A. Tabassum, N. Ranjan, M. Maqsood, <span class="me">O. Aijaz</span>, H. Li, H. X. Ren, Z. Liu, P. Nakov, E. P. Xing</span>
+        <span class="pub-venue">2nd Workshop on Efficient Reasoning, COLM 2026</span>
+      </li>
+      <li>
+        <span class="pub-title">Oath Breakers at SemEval-2025 Task 06: PromiseEval</span>
+        <span class="pub-authors">M. K. Mukaddam*, <span class="me">O. Aijaz</span>*, A. Enayat</span>
+        <span class="pub-venue">SemEval-2025, ACL · <span class="honor">2nd place, English leaderboard</span></span>
+      </li>
+      <li>
+        <span class="pub-title">Team Sharingans at SimpleText: Fine-Tuned LLM Based Approach to Scientific Text Simplification</span>
+        <span class="pub-authors">S. M. Ali, H. Sajid, <span class="me">O. Aijaz</span>, O. Waheed, F. Alvi, A. Samad</span>
+        <span class="pub-venue">CLEF 2024 Working Notes (CEUR-WS) · <span class="honor">Top-5 finish</span></span>
+      </li>
+    </ol>
+
+    <h3>Under review</h3>
+    <ol class="pubs">
+      <li>
+        <span class="pub-title">SciDER: Scientific Data-Centric End-to-End Researcher</span>
+        <span class="pub-authors">K. Lin, <span class="me">O. Aijaz</span>, Y. Lu, Y. Luo, X. Guo, W. Chen, P. Nakov</span>
+        <span class="pub-venue">ACL Rolling Review</span>
+      </li>
+    </ol>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>Macquarie University</strong>, Sydney</span>
+        <span class="when">Sep 2026 – present</span>
+      </div>
+      <div class="sub">Visiting Researcher, School of Computing · with Usman Naseem</div>
+      <p>
+        Cultural alignment in language models: whose norms a model reproduces when it
+        answers in a given language, and where in the model that choice is made. Leading
+        KINSHIFT, a kinship-reasoning benchmark for Urdu, Sindhi, Punjabi and Pashto in
+        native and Roman scripts, and extending it to localization and steering of the
+        responsible model components.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>MBZUAI</strong>, Abu Dhabi</span>
+        <span class="when">Aug 2025 – present</span>
+      </div>
+      <div class="sub">Graduate Researcher · with Preslav Nakov</div>
+      <p>
+        Retrieval-augmented generation and long-context QA. Showed that failures usually
+        attributed to reading are driven mainly by retrieval coverage, and built QIMG-7,
+        a paired clean/polluted benchmark showing that polluted retrieved text is the main
+        failure channel in multimodal RAG. Contributed to UrduMMLU, a natively authored
+        Urdu benchmark of 26,389 questions.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>Institute of Foundation Models, MBZUAI</strong></span>
+        <span class="when">Jun 2026 – Aug 2026</span>
+      </div>
+      <div class="sub">Research Intern, Jais-3 Data Team</div>
+      <p>
+        Mapped the knowledge boundaries of five open LLMs (8B–120B) over a 791K-fact
+        Arabic/English bank, and built a fine-tuning set restricted to facts the model
+        already knew. Also designed verifiable-reward RL tasks for Arabic morphology,
+        i'rab and poetry, and built bilingual agentic search trajectories grounded in
+        retrieved documents.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>MSc, Natural Language Processing</strong></span>
+        <span class="when">expected May 2027</span>
+      </div>
+      <div class="sub">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>BSc, Computer Science</strong></span>
+        <span class="when">Jun 2025</span>
+      </div>
+      <div class="sub">Habib University, Karachi · GPA 3.86/4.00</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span><strong>Exchange semester</strong> (Global UGRAD)</span>
+        <span class="when">Dec 2023</span>
+      </div>
+      <div class="sub">Wright State University, Ohio · GPA 4.00/4.00</div>
+    </div>
+  </section>
+
+  <section id="honors">
+    <h2>Honors</h2>
+    <ul class="plain">
+      <li>Global Undergraduate Exchange Program, US Department of State (selected from 35,000+ applicants), 2023</li>
+      <li>TOPS Scholar, full merit scholarship, Habib University</li>
+      <li>Dean's List, Habib University, Fall 2022 and Spring 2024</li>
+      <li>2nd place (English), SemEval-2025 PromiseEval; top-5, CLEF 2024 SimpleText</li>
+    </ul>
+  </section>
+
+  <footer>
+    Last updated November 2026.
+  </footer>
+
+</main>
+</body>
+</html>
