@@ -4,176 +4,157 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%231f3f73%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%230b57d0%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial,sans-serif%27 font-weight=%27bold%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EOA%3C/text%3E%3C/svg%3E">
 <title>Owais Aijaz</title>
-<meta name="description" content="Owais Aijaz — MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
+<meta name="description" content="Owais Aijaz, MSc student in Natural Language Processing at MBZUAI. Research on the reliability of large language models, retrieval and grounding, and multilingual NLP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --text: #1a1a1a;
-    --muted: #555555;
-    --faint: #6b6b6b;
-    --rule: #dddddd;
-    --link: #1f3f73;
+    --text: #202124;
+    --muted: #5f6368;
+    --rule: #dadce0;
+    --link: #0b57d0;
+    --accent: #b3261e;
     --bg: #ffffff;
-    --serif: "EB Garamond", Garamond, "Times New Roman", serif;
+    --sans: Roboto, Arial, Helvetica, sans-serif;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: var(--serif);
-    font-size: 20px;
-    line-height: 1.55;
-    font-feature-settings: "kern", "liga", "onum";
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
   }
   a { color: var(--link); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-  .sc { font-variant-caps: all-small-caps; letter-spacing: 0.05em; }
+  a:hover { text-decoration: underline; }
 
   /* Top bar */
   nav.top {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.96);
+    background: var(--bg);
     border-bottom: 1px solid var(--rule);
   }
   nav.top .inner {
-    max-width: 780px;
+    max-width: 820px;
     margin: 0 auto;
-    padding: 9px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 16px;
   }
-  nav.top .name { color: var(--text); font-size: 20px; }
+  nav.top .name { color: var(--text); font-weight: 500; }
   nav.top ul {
-    list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; flex-wrap: wrap;
-    font-variant-caps: all-small-caps; letter-spacing: 0.06em; font-size: 19px;
+    list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap;
+    font-size: 15px;
   }
   nav.top ul a { color: var(--muted); }
   nav.top ul a:hover { color: var(--link); text-decoration: none; }
 
   main {
-    max-width: 780px;
+    max-width: 820px;
     margin: 0 auto;
-    padding: 52px 20px 72px;
+    padding: 44px 20px 64px;
   }
 
   /* Intro */
   .intro {
     display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 0 40px;
+    grid-template-columns: 170px 1fr;
+    gap: 0 36px;
     align-items: start;
   }
+  .intro.no-photo { display: block; }
   .portrait {
-    position: relative;
-    width: 160px;
-    height: 192px;
-    background: #f4f4f2;
-    border: 1px solid var(--rule);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 170px;
+    height: 204px;
     grid-row: 1 / span 2;
   }
   .portrait img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    z-index: 1;
+    border-radius: 4px;
   }
-  .portrait .initials { font-size: 46px; color: #9a9a96; font-variant-caps: all-small-caps; letter-spacing: 0.06em; }
   .idtext { grid-column: 2; }
   .bio { grid-column: 2; }
   .intro h1 {
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 500;
-    line-height: 1.05;
+    line-height: 1.15;
     margin: 0 0 10px;
   }
   .intro .role {
     color: var(--muted);
     margin: 0 0 12px;
-    line-height: 1.45;
+    line-height: 1.5;
   }
   .contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 10px;
+    gap: 4px 20px;
     margin: 0 0 22px;
     padding: 0;
     list-style: none;
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.06em;
-    font-size: 20px;
+    font-weight: 500;
   }
-  .contact li + li::before { content: "·"; color: var(--faint); margin-right: 10px; }
   .intro p { margin: 0 0 13px; }
-  .status { font-style: italic; }
+  .status { font-weight: 500; color: var(--accent); }
 
   /* Sections */
-  section { margin-top: 56px; scroll-margin-top: 64px; }
+  section { margin-top: 48px; scroll-margin-top: 64px; }
   h2 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     margin: 0 0 16px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--rule);
-    font-variant-caps: small-caps;
-    letter-spacing: 0.03em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--link);
   }
   h3 {
-    font-size: 19px;
-    font-weight: 400;
-    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
     color: var(--muted);
-    margin: 26px 0 8px;
+    margin: 26px 0 6px;
   }
-  .note { color: var(--faint); font-size: 17px; margin: -8px 0 0; }
+  .note { color: var(--muted); font-size: 14px; margin: -8px 0 0; }
 
   /* Publications */
   ol.pubs { list-style: none; padding: 0; margin: 0; }
   ol.pubs li {
     display: grid;
-    grid-template-columns: 118px 1fr;
+    grid-template-columns: 124px 1fr;
     gap: 20px;
-    padding: 9px 0;
+    padding: 10px 0;
   }
   .venue-tag {
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.05em;
-    color: var(--muted);
-    line-height: 1.3;
-    padding-top: 2px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.35;
+    padding-top: 1px;
   }
-  .venue-tag small { display: block; font-size: 17px; font-variant-caps: normal; letter-spacing: 0; font-style: italic; color: var(--faint); }
-  .pub-title { display: block; line-height: 1.3; font-weight: 500; color: var(--text); }
+  .venue-tag small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); }
+  .pub-title { display: block; line-height: 1.4; font-weight: 500; color: var(--text); }
   a.pub-title { color: var(--link); }
-  .pub-authors { display: block; color: var(--muted); font-size: 18px; margin-top: 2px; }
+  .pub-authors { display: block; color: var(--muted); font-size: 15px; margin-top: 2px; }
   .pub-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 12px;
-    font-size: 17.5px;
-    font-style: italic;
-    color: var(--faint);
+    gap: 0 14px;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
   }
   .pub-meta:empty { display: none; }
-  .pub-meta .honor { color: var(--text); font-style: italic; font-weight: 600; }
-  .pub-meta a { font-style: normal; font-variant-caps: all-small-caps; letter-spacing: 0.05em; }
-  .me { color: var(--text); font-weight: 600; }
+  .pub-meta .honor { color: var(--accent); font-weight: 500; }
+  .me { color: var(--text); font-weight: 700; }
 
   /* Dated entries */
   .entry { margin-bottom: 22px; }
@@ -184,34 +165,31 @@
     flex-wrap: wrap;
     align-items: baseline;
   }
-  .entry-head strong { font-weight: 600; }
-  .entry-head .when { color: var(--faint); white-space: nowrap; font-size: 18px; }
-  .entry .sub { color: var(--muted); font-style: italic; }
-  .entry p { margin: 4px 0 0; }
+  .entry-head strong { font-weight: 500; }
+  .entry-head .when { color: var(--muted); white-space: nowrap; font-size: 15px; }
+  .entry .sub { color: var(--muted); }
+  .entry p { margin: 6px 0 0; }
 
   ul.plain { padding-left: 20px; margin: 0; }
-  ul.plain li { margin-bottom: 4px; }
+  ul.plain li { margin-bottom: 6px; }
 
   footer {
-    margin-top: 64px;
+    margin-top: 56px;
     padding-top: 12px;
     border-top: 1px solid var(--rule);
-    color: var(--faint);
-    font-size: 16px;
-    font-style: italic;
+    color: var(--muted);
+    font-size: 14px;
   }
 
   @media (max-width: 640px) {
-    body { font-size: 18.5px; }
     nav.top .name { display: none; }
-    nav.top ul { gap: 14px; font-size: 18px; }
-    main { padding-top: 30px; }
-    .intro { grid-template-columns: 88px 1fr; gap: 18px; align-items: center; }
-    .portrait { grid-row: auto; width: 88px; height: 106px; }
-    .portrait .initials { font-size: 30px; }
-    .bio { grid-column: 1 / -1; margin-top: 6px; }
-    .intro h1 { font-size: 34px; }
-    .intro .role { margin-bottom: 0; font-size: 17px; }
+    nav.top ul { gap: 14px; font-size: 14px; }
+    main { padding-top: 28px; }
+    .intro { grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
+    .portrait { grid-row: auto; width: 96px; height: 115px; }
+    .bio { grid-column: 1 / -1; margin-top: 8px; }
+    .intro h1 { font-size: 28px; }
+    .intro .role { margin-bottom: 0; font-size: 14px; }
     ol.pubs li { grid-template-columns: 1fr; gap: 0; }
     .venue-tag small { display: inline; margin-left: 6px; }
   }
@@ -236,10 +214,9 @@
 
   <header class="intro" id="about">
     <!-- Photo: put a portrait named photo.jpg next to this file (roughly 5:6, e.g. 600x720).
-         Until then the initials below are shown. -->
+         Until it exists the photo column is hidden. -->
     <div class="portrait">
-      <img src="photo.jpg" alt="Owais Aijaz" onerror="this.remove()">
-      <span class="initials" aria-hidden="true">OA</span>
+      <img src="photo.jpg" alt="Owais Aijaz" onerror="this.closest('.intro').classList.add('no-photo'); this.parentNode.remove()">
     </div>
 
     <div class="idtext">
@@ -388,7 +365,7 @@
         <span><strong>Macquarie University</strong>, Sydney</span>
         <span class="when">Sep 2026 – present</span>
       </div>
-      <div class="sub">Visiting Researcher, School of Computing · with <a href="https://usmaann.github.io/">Usman Naseem</a></div>
+      <div class="sub">Visiting Researcher, School of Computing, with <a href="https://usmaann.github.io/">Usman Naseem</a></div>
       <p>
         Cultural alignment in language models: whose norms a model reproduces when it
         answers in a given language, and where in the model that choice is made. Leading
@@ -403,7 +380,7 @@
         <span><strong>MBZUAI</strong>, Abu Dhabi</span>
         <span class="when">Aug 2025 – present</span>
       </div>
-      <div class="sub">Graduate Researcher · advised by <a href="https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov">Preslav Nakov</a></div>
+      <div class="sub">Graduate Researcher, advised by <a href="https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov">Preslav Nakov</a></div>
       <p>
         Retrieval-augmented generation and long-context QA. Showed that failures usually
         attributed to reading are driven mainly by retrieval coverage, and built QIMG-7,
@@ -444,14 +421,14 @@
         <span><strong>BSc, Computer Science</strong></span>
         <span class="when">Jun 2025</span>
       </div>
-      <div class="sub">Habib University, Karachi · GPA 3.86/4.00</div>
+      <div class="sub">Habib University, Karachi, GPA 3.86/4.00</div>
     </div>
     <div class="entry">
       <div class="entry-head">
         <span><strong>Exchange semester</strong> (Global UGRAD)</span>
         <span class="when">Dec 2023</span>
       </div>
-      <div class="sub">Wright State University, Ohio · GPA 4.00/4.00</div>
+      <div class="sub">Wright State University, Ohio, GPA 4.00/4.00</div>
     </div>
   </section>
 
